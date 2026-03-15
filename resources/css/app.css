@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+from {
+opacity:0;
+transform:translateY(-5px);
+}
+to {
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.animate-fadeIn{
+animation:fadeIn .2s ease-in-out;
+}
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-fade-slide {
+    animation: fadeSlide 0.8s ease-out forwards;
+}
+
+@keyframes pulseSlow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.9; }
+}
+
+.animate-pulse-slow {
+    animation: pulseSlow 4s ease-in-out infinite;
+}
+
+.btn {
+    @apply px-5 py-2 rounded-xl font-semibold transition shadow;
+}
+
+.btn-primary {
+    @apply bg-purple-600 text-white hover:bg-purple-700;
+}
+
+.btn-success {
+    @apply bg-green-500 text-white hover:bg-green-600;
+}
+
+.btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600;
+}
+
+.btn-soft {
+    @apply bg-purple-100 text-purple-700 hover:bg-purple-200;
+}
